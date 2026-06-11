@@ -1,15 +1,16 @@
 from pydantic import BaseModel
 
 
-class ProjectCreate(BaseModel):
+class AgentCreate(BaseModel):
     name: str
-    project_type: str
+    agent_type: str
 
 
-class ProjectResponse(BaseModel):
+class AgentResponse(BaseModel):
     id: int
     name: str
-    project_type: str
+    agent_type: str
+    status: str
 
     model_config = {
         "from_attributes": True
